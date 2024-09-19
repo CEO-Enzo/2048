@@ -1,0 +1,128 @@
+/* Style général du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8ef;
+    color: #776e65;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style du titre du jeu */
+h1 {
+    margin-top: 20px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/* Conteneur principal du jeu */
+.game-container {
+    width: 450px; /* Correspond à la largeur totale calculée de la grille */
+    margin: 0 auto;
+}
+
+/* Grille du jeu */
+.grid {
+    width: 450px;   /* Largeur totale de la grille */
+    height: 450px;  /* Hauteur totale de la grille */
+    background-color: #bbada0;
+    margin: 20px auto;
+    padding: 10px;  /* Padding de 10px */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 colonnes de 100px */
+    grid-template-rows: repeat(4, 100px);    /* 4 lignes de 100px */
+    gap: 10px;      /* Gap de 10px entre les tuiles */
+    border-radius: 10px;
+}
+
+/* Style général des tuiles */
+.tile {
+    background-color: #cdc1b4;
+    border-radius: 5px;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #776e65;
+    width: 100px;   /* Largeur fixe des tuiles */
+    height: 100px;  /* Hauteur fixe des tuiles */
+    box-sizing: border-box;
+}
+
+/* Tuiles vides */
+.tile[data-value="0"] {
+    background-color: #cdc1b4;
+    color: transparent;
+}
+
+/* Tuiles avec des valeurs spécifiques */
+.tile[data-value="2"] {
+    background-color: #eee4da;
+    color: #776e65;
+}
+
+.tile[data-value="4"] {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+
+.tile[data-value="8"] {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.tile[data-value="16"] {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.tile[data-value="32"] {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.tile[data-value="64"] {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.tile[data-value="128"] {
+    background-color: #edcf72;
+    color: #f9f6f2;
+    font-size: 35px; /* Ajustement de la taille du texte */
+}
+
+.tile[data-value="256"] {
+    background-color: #edcc61;
+    color: #f9f6f2;
+    font-size: 35px;
+}
+
+.tile[data-value="512"] {
+    background-color: #edc850;
+    color: #f9f6f2;
+    font-size: 35px;
+}
+
+.tile[data-value="1024"] {
+    background-color: #edc53f;
+    color: #f9f6f2;
+    font-size: 30px;
+}
+
+.tile[data-value="2048"] {
+    background-color: #edc22e;
+    color: #f9f6f2;
+    font-size: 30px;
+}
+
+/* Style pour les valeurs supérieures à 2048 */
+.tile[data-value="4096"],
+.tile[data-value="8192"],
+.tile[data-value="16384"] {
+    background-color: #3c3a32;
+    color: #f9f6f2;
+    font-size: 25px;
+}
